@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Profile from './Profile'
+import { Link } from 'react-router-dom'
 // import Friends from './Friends'
 
 const FriendCard = ({friends}) => {
@@ -39,7 +40,10 @@ const FriendCard = ({friends}) => {
                     </div>
                      </div>
                      <div className='w-full p-3 flex gap-2 justify-start'>
-                        <button className='bg-(--color-primary) py-2 w-full cursor-pointer text-white px-1 rounded-lg '>view profile</button>
+                      <Link to={`/chat/${friend._id}`}> 
+                        <button className='bg-(--color-primary) py-2 w-full cursor-pointer text-white px-1 rounded-lg '
+                        >view profile</button>
+                        </Link>
                         <span className='text-3xl font-bold -my-2 rounded-full'>...</span>
                      </div> 
 

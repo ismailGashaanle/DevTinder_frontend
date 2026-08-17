@@ -7,6 +7,7 @@ import { Provider } from "react-redux"
 import AppStore from "./redux/AppStore"
 import Feed from "./components/Feed"
 import Requests from "./components/Requests"
+import Chat from "./components/chat"
 
  
 function App() {
@@ -23,6 +24,7 @@ function App() {
            <Route path="/friends" element={<Friends/>}></Route>
            <Route path="/requests/recieved" element={<Requests/>}></Route>
            <Route path="/send/requests" element={<Feed/>}></Route>
+           <Route path="/chat/:toTargetUser" element={<Chat/>}></Route>
            <Route path="*" element={<div className="h-100 w-full bg-red-500 text-white text-4xl justify-center flex items-center">NOT FOUND</div>} />
           </Route>
 

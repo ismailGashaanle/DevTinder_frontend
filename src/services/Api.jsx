@@ -103,9 +103,8 @@ export const useSignUpApi=(firstName,lastName,phone,email,password,confirmPasswo
         return navigate("/profile")
         
     }catch(err){
-      ///console.log(err.message)
-      if(err.status==400){
-        dispatch(addError_SignUp(err?.response?.data))
+      if (err.response?.status === 400) {
+       dispatch(addError_SignUp(err.response?.data?.message));
       }
     }
      }

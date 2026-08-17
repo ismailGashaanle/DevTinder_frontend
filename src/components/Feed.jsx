@@ -30,6 +30,7 @@ const Feed = () => {
             <Link to="/friends">Friend</Link>
             <Link to="/requests/recieved"> request</Link>
             <Link to="/send/requests">send requests</Link>
+            <Link to="/chat/6a828d8dc2cac16a465277a2">chat</Link>
            
          </div>
          
